@@ -3,6 +3,7 @@ const cors = require('cors');
 const { errorHandler } = require('./middleware/errorMiddleware');
 const healthRoutes = require('./routes/healthRoutes');
 const authRoutes = require('./routes/authRoutes');
+const studentRoutes = require('./routes/studentRoutes');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/api/health', healthRoutes);
 
 // Import route modules here when features are built
 app.use('/api/auth', authRoutes);
+app.use('/api/students', studentRoutes);
 // app.use('/api/users', userRoutes);
 // app.use('/api/students', studentRoutes);
 // app.use('/api/classes', classRoutes);
